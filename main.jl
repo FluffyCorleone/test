@@ -1,4 +1,9 @@
-x = 9 ^ 2
-y = x * 2
-println( "Nine squared is: $x")
-println( "..Times 2: $y")
+# Collatz Conjecture - Start with a number n > 1. Find the number of steps it takes to reach one using the 
+# following process: If n is even, divide it by 2. If n is odd, multiply it by 3 and add 1.
+
+function collatz( x )
+    (x^2)*2
+end
+
+y = collatz( 9 )
+println( "Result: $y")
