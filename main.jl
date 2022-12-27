@@ -1,3 +1,13 @@
+function factorial( x )
+    f = x    
+
+    for i in reverse( 1:f-1 )
+        x *= i        
+    end
+
+    x
+end
+
 # Collatz Conjecture - Start with a number n > 1. Find the number of steps it takes to reach one using the 
 # following process: If n is even, divide it by 2. If n is odd, multiply it by 3 and add 1.
 
@@ -16,7 +26,7 @@ function collatz( x )
             x = x * 3 + 1
         end    
 
-        steps = steps + 1
+        steps += 1
     end
 
     steps
@@ -24,3 +34,9 @@ end
 
 steps = collatz( 994534 )
 println( "collatz 99: $steps steps")
+
+num = 25
+fact = factorial( num )
+println( "$num factorial: $fact")
+
+println( "$(typeof(num))" )
